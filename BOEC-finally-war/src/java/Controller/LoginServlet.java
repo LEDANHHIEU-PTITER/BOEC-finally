@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import session.AccountFacadeLocal;
+import session.AuthorFacadeLocal;
 import session.CustomerFacadeLocal;
 import session.PersonFacadeLocal;
 

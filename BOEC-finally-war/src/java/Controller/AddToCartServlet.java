@@ -81,7 +81,7 @@ public class AddToCartServlet extends HttpServlet {
                 item.setQuantity(soLuong);
                 cartFacade.addItemToCart(item);
                 ArrayList<Itemdetail> listItemCart = cartFacade.getCart();
-//                cartCurrent.setItemcartList(listItemCart);
+                cartCurrent.setItemdetailList(listItemCart);
                 session.setAttribute("currentSessionCart", cartCurrent);        // Set lại Cart cho Session
                 json = "{\"OK\" : 1}";
             } else {

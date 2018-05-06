@@ -10,7 +10,7 @@ import entities.Item;
 import entities.Itemdetail;
 import java.util.ArrayList;
 import javax.annotation.PostConstruct;
-import javax.ejb.Stateless;
+import javax.ejb.Stateful;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -18,7 +18,7 @@ import javax.persistence.PersistenceContext;
  *
  * @author HieuLe
  */
-@Stateless
+@Stateful
 public class CartFacade extends AbstractFacade<Cart> implements CartFacadeLocal {
 
     private ArrayList<Itemdetail> listItems;

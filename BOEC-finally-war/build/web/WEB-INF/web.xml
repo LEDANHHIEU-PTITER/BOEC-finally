@@ -40,6 +40,18 @@
         <servlet-name>LoadCartServlet</servlet-name>
         <servlet-class>Controller.LoadCartServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddElectronic</servlet-name>
+        <servlet-class>Admin.Controller.AddElectronic</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminHomeServlet</servlet-name>
+        <servlet-class>Admin.Controller.AdminHomeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetAccount</servlet-name>
+        <servlet-class>Controller.GetAccount</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AccountServlet</servlet-name>
         <url-pattern>/AccountServlet</url-pattern>
@@ -75,6 +87,18 @@
     <servlet-mapping>
         <servlet-name>LoadCartServlet</servlet-name>
         <url-pattern>/LoadCartServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddElectronic</servlet-name>
+        <url-pattern>/AddElectronic</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminHomeServlet</servlet-name>
+        <url-pattern>/AdminHomeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetAccount</servlet-name>
+        <url-pattern>/GetAccount</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

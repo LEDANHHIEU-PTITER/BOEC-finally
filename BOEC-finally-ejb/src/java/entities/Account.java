@@ -12,6 +12,8 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
@@ -30,6 +32,7 @@ import javax.xml.bind.annotation.XmlTransient;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Account.login", query = "SELECT a FROM Account a WHERE a.userName = :userName AND a.passWord = :passWord")
+    ,@NamedQuery(name = "Account.updatePassWord", query = "UPDATE Account a SET a.id = :id WHERE a.passWord = :passWord")
     ,@NamedQuery(name = "Account.findAll", query = "SELECT a FROM Account a")
     , @NamedQuery(name = "Account.findById", query = "SELECT a FROM Account a WHERE a.id = :id")
     , @NamedQuery(name = "Account.findByUserName", query = "SELECT a FROM Account a WHERE a.userName = :userName")
@@ -51,6 +54,9 @@ public class Account implements Serializable {
     private String passWord;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "accountID")
     private List<Person> personList;
+    @JoinColumn(name = "RoleId", referencedColumnName = "Id")
+    @ManyToOne(optional = false)
+    private Role roleId;
 
     public Account() {
     }
@@ -116,5 +122,13 @@ public class Account implements Serializable {
     public String toString() {
         return "entities.Account[ id=" + id + " ]";
     }
-    
+
+    public Role getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Role roleId) {
+        this.roleId = roleId;
+    }
+
 }

@@ -82,6 +82,9 @@ public class Order1 implements Serializable {
     private Payment paymentID;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "orderID")
     private List<Bill> billList;
+    @JoinColumn(name = "CountingEmloyeePersonID", referencedColumnName = "PersonID")
+    @ManyToOne(optional = false)
+    private Countingemloyee countingEmloyeePersonID;
 
     public Order1() {
     }
@@ -209,5 +212,13 @@ public class Order1 implements Serializable {
     public String toString() {
         return "entities.Order1[ id=" + id + " ]";
     }
-    
+
+    public Countingemloyee getCountingEmloyeePersonID() {
+        return countingEmloyeePersonID;
+    }
+
+    public void setCountingEmloyeePersonID(Countingemloyee countingEmloyeePersonID) {
+        this.countingEmloyeePersonID = countingEmloyeePersonID;
+    }
+
 }
