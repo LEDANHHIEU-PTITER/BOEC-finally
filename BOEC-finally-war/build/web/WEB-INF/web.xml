@@ -48,6 +48,10 @@
         <servlet-name>DeleteToCartServlet</servlet-name>
         <servlet-class>Controller.DeleteToCartServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddBookServerlet</servlet-name>
+        <servlet-class>Controller.AddBookServerlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/HomeServlet</url-pattern>
@@ -91,6 +95,10 @@
     <servlet-mapping>
         <servlet-name>DeleteToCartServlet</servlet-name>
         <url-pattern>/DeleteToCartServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddBookServerlet</servlet-name>
+        <url-pattern>/AddBookServerlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
