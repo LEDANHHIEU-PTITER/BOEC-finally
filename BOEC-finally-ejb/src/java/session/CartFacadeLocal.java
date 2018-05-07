@@ -35,7 +35,9 @@ public interface CartFacadeLocal {
 
     void addItemToCart(Item item);
 
-    ArrayList<Itemdetail> getCart();
+    List<Itemdetail> getCart();
+
+    void setCart(List<Itemdetail> itemdetails);
 
     void removeItemInCart(int index);
 }

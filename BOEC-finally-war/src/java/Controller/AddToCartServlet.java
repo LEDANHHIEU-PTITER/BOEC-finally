@@ -11,6 +11,7 @@ import entities.Itemdetail;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -80,7 +81,7 @@ public class AddToCartServlet extends HttpServlet {
                 Item item = itemFacade.find(electronicId);
                 item.setQuantity(soLuong);
                 cartFacade.addItemToCart(item);
-                ArrayList<Itemdetail> listItemCart = cartFacade.getCart();
+                List<Itemdetail> listItemCart = cartFacade.getCart();
                 cartCurrent.setItemdetailList(listItemCart);
                 session.setAttribute("currentSessionCart", cartCurrent);        // Set lại Cart cho Session
                 json = "{\"OK\" : 1}";

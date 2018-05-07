@@ -5,26 +5,29 @@
  */
 package Controller;
 
-import com.google.gson.Gson;
-import entities.Account;
+import entities.Cart;
+import entities.Item;
+import entities.Itemdetail;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import session.AccountFacadeLocal;
+import javax.servlet.http.HttpSession;
+import session.CartFacadeLocal;
 
 /**
  *
  * @author HieuLe
  */
-public class GetAccount extends HttpServlet {
+public class DeleteToCartServlet extends HttpServlet {
 
     @EJB
-    private AccountFacadeLocal accountFacade;
+    private CartFacadeLocal cartFacade;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,29 +41,21 @@ public class GetAccount extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        try {
-            List<Account> findAll = accountFacade.findAll();
-            String json = new Gson().toJson(findAll);
-            out.write(json);
-        } catch (Exception e) {
-            e.printStackTrace();
-            out.write("");
-        }
-
-        /* TODO output your page here. You may use following sample code. */
-//            out.println("<!DOCTYPE html>");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
 //            out.println("<html>");
 //            out.println("<head>");
-//            out.println("<title>Servlet GetAccount</title>");            
+//            out.println("<title>Servlet DeleteToCartServlet</title>");
 //            out.println("</head>");
 //            out.println("<body>");
-//            out.println("<h1>Servlet GetAccount at " + request.getContextPath() + "</h1>");
+            out.write("<script> alert('Xóa thành công')</script>");
 //            out.println("</body>");
 //            out.println("</html>");
+        }
     }
 
-// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -72,7 +67,27 @@ public class GetAccount extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter writer = response.getWriter();
+        try {
+            int stt = Integer.parseInt(request.getParameter("STT"));
+            HttpSession session = request.getSession();
+            Cart cart = (Cart) session.getAttribute("currentSessionCart");
+            if (cart == null) {
+                processRequest(request, response);
+                writer.write("fail");
+            } else {
+                List<Itemdetail> itemdetailList = cart.getItemdetailList();
+                cartFacade.setCart(itemdetailList);            // Set List<ItemDetail> vào trong Cart
+                Itemdetail itemdetail = itemdetailList.get(stt);
+                Item item = itemdetail.getItemID();
+                cartFacade.removeItemInCart(stt);           //Remove Stt trong List<ItemDetail>
+                writer.write("ok");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            writer.write("fail");
+        }
     }
 
     /**

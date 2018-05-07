@@ -57,5 +57,5 @@ public class ItemFacade extends AbstractFacade<Item> implements ItemFacadeLocal 
             return null;
         }
     }
-
+    
 }

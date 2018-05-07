@@ -42,7 +42,5 @@ public class PersonFacade extends AbstractFacade<Person> implements PersonFacade
             e.printStackTrace();
             return null;
         }
-
     }
-
 }

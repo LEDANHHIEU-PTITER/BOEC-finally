@@ -1,3 +1,27 @@
+function XoaItemInCart(stt) {
+
+    var bool = confirm("Bạn có muốn xóa Item STT = " + stt);
+
+    if (bool == true) {
+        $.ajax({
+            type: 'GET',
+            url: 'DeleteToCartServlet',
+            data: {STT: stt},
+            dataType: 'html',
+            success: function (data) {
+                if (data == "ok") {
+                    alert("Xóa thành công");
+                    $(location).attr('href', 'http://localhost:8080/BOEC-finally-war/Cart.jsp');
+                } else {
+                    alert("Lỗi rồi");
+                }
+            },
+            error: function (data) {
+                alert("Xử lý tại Server Lỗi");
+            }
+        });
+    }
+}
 function themvaogiohang() {
     var electronicId = $('#DetailElectronicID').val();
     var soLuong = $('#DetailElectronicCount').val();

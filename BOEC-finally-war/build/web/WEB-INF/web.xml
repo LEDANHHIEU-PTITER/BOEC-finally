@@ -5,10 +5,6 @@
         <welcome-file>HomeServlet</welcome-file>
     </welcome-file-list>
     <servlet>
-        <servlet-name>AccountServlet</servlet-name>
-        <servlet-class>Controller.AccountServlet</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>HomeServlet</servlet-name>
         <servlet-class>Controller.HomeServlet</servlet-class>
     </servlet>
@@ -49,13 +45,9 @@
         <servlet-class>Admin.Controller.AdminHomeServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>GetAccount</servlet-name>
-        <servlet-class>Controller.GetAccount</servlet-class>
+        <servlet-name>DeleteToCartServlet</servlet-name>
+        <servlet-class>Controller.DeleteToCartServlet</servlet-class>
     </servlet>
-    <servlet-mapping>
-        <servlet-name>AccountServlet</servlet-name>
-        <url-pattern>/AccountServlet</url-pattern>
-    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/HomeServlet</url-pattern>
@@ -97,12 +89,12 @@
         <url-pattern>/AdminHomeServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>GetAccount</servlet-name>
-        <url-pattern>/GetAccount</url-pattern>
+        <servlet-name>DeleteToCartServlet</servlet-name>
+        <url-pattern>/DeleteToCartServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
-            60
+            600
         </session-timeout>
     </session-config>
 </web-app>
