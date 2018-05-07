@@ -3,19 +3,10 @@
     Created on : Apr 26, 2018, 12:41:01 AM
     Author     : HieuLe
 --%>
-<%@page import="GenerateID.GenerateSequenceID"%>
 <%@page import="entities.*"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%
-    if (session.getAttribute("currentSessionCart") == null) {
-        Cart cart = new Cart();     //Set Session giỏ hàng.
-        GenerateSequenceID generateSequenceID = new GenerateSequenceID();
-        long idGioHang = generateSequenceID.creatIDbyDateTime();
-        cart.setId(idGioHang + "");
-        session.setAttribute("currentSessionCart", cart);
-    }
-%>
+
 <!DOCTYPE html>
 <html>
     <head>

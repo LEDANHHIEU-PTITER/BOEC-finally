@@ -11,6 +11,7 @@ import entities.Itemdetail;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -66,22 +67,20 @@ public class LoadCartServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("application/json");
+        response.setContentType("application/html");
         response.setCharacterEncoding("UTF-8");
         try {
-            String json = null;
             HttpSession session = request.getSession(true);
-
-//            ArrayList<Itemdetail> listCartItem = cartFacade.getCart();
+            List<Itemdetail> listCartItem = cartFacade.getCart();
             if (session.getAttribute("currentSessionCart") != null) {
                 Cart cartCurrent = (Cart) session.getAttribute("currentSessionCart");       // Lấy Session Cart hiện tại
 //                ArrayList<Itemdetail> listCartItem = cartFacade.getCart();
 //                Cart currentcart = (Cart) session.getAttribute("currentSessionCart");
-                json = new Gson().toJson(cartCurrent);
+//                json = new Gson().toJson(cartCurrent);
             } else {
-                json = new Gson().toJson("");
+//                json = new Gson().toJson("");
             }
-            response.getWriter().write(json);
+//            response.getWriter().write(json);
         } catch (Exception e) {
             e.printStackTrace();
             response.getWriter().write("");

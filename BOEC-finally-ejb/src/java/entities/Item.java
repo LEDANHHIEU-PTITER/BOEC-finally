@@ -82,6 +82,105 @@ public class Item implements Serializable {
     @JoinColumn(name = "CategoryID", referencedColumnName = "ID")
     @ManyToOne(optional = false)
     private Category categoryID;
+
+    public Smartphone getSmartphone() {
+        return smartphone;
+    }
+
+    public void setSmartphone(Smartphone smartphone) {
+        this.smartphone = smartphone;
+    }
+
+    public Book getBook() {
+        return book;
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
+    }
+
+    public Techbook getTechbook() {
+        return techbook;
+    }
+
+    public void setTechbook(Techbook techbook) {
+        this.techbook = techbook;
+    }
+
+    public Literaturebook getLiteraturebook() {
+        return literaturebook;
+    }
+
+    public void setLiteraturebook(Literaturebook literaturebook) {
+        this.literaturebook = literaturebook;
+    }
+
+    public Maleclothes getMaleclothes() {
+        return maleclothes;
+    }
+
+    public void setMaleclothes(Maleclothes maleclothes) {
+        this.maleclothes = maleclothes;
+    }
+
+    public Laptop getLaptop() {
+        return laptop;
+    }
+
+    public void setLaptop(Laptop laptop) {
+        this.laptop = laptop;
+    }
+
+    public Tablet getTablet() {
+        return tablet;
+    }
+
+    public void setTablet(Tablet tablet) {
+        this.tablet = tablet;
+    }
+
+    public Electronic getElectronic() {
+        return electronic;
+    }
+
+    public void setElectronic(Electronic electronic) {
+        this.electronic = electronic;
+    }
+
+    public Femaleclothes getFemaleclothes() {
+        return femaleclothes;
+    }
+
+    public void setFemaleclothes(Femaleclothes femaleclothes) {
+        this.femaleclothes = femaleclothes;
+    }
+
+    public Clothes getClothes() {
+        return clothes;
+    }
+
+    public void setClothes(Clothes clothes) {
+        this.clothes = clothes;
+    }
+
+    public List<Itemdetail> getItemcartList() {
+        return itemcartList;
+    }
+
+    public void setItemcartList(List<Itemdetail> itemcartList) {
+        this.itemcartList = itemcartList;
+    }
+
+    public List<Itemdetail> getItemdetailList() {
+        return itemdetailList;
+    }
+
+    public void setItemdetailList(List<Itemdetail> itemdetailList) {
+        this.itemdetailList = itemdetailList;
+    }
+    @JoinColumn(name = "WarehouseEmployeePersonID", referencedColumnName = "PersonID")
+    @ManyToOne(optional = false)
+    private Warehouseemployee warehouseEmployeePersonID;
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "item")
     private Femaleclothes femaleclothes;
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "item")
@@ -175,6 +274,14 @@ public class Item implements Serializable {
     @Override
     public String toString() {
         return "entities.Item[ id=" + id + " ]";
+    }
+
+    public Warehouseemployee getWarehouseEmployeePersonID() {
+        return warehouseEmployeePersonID;
+    }
+
+    public void setWarehouseEmployeePersonID(Warehouseemployee warehouseEmployeePersonID) {
+        this.warehouseEmployeePersonID = warehouseEmployeePersonID;
     }
 
 }

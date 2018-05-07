@@ -44,6 +44,9 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Person.findByAddress", query = "SELECT p FROM Person p WHERE p.address = :address")})
 public class Person implements Serializable {
 
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "person")
+    private Warehouseemployee warehouseemployee;
+
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
@@ -265,6 +268,14 @@ public class Person implements Serializable {
     @Override
     public String toString() {
         return "entities.Person[ id=" + id + " ]";
+    }
+
+    public Warehouseemployee getWarehouseemployee() {
+        return warehouseemployee;
+    }
+
+    public void setWarehouseemployee(Warehouseemployee warehouseemployee) {
+        this.warehouseemployee = warehouseemployee;
     }
 
 }

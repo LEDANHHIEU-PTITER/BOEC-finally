@@ -5,10 +5,6 @@
         <welcome-file>HomeServlet</welcome-file>
     </welcome-file-list>
     <servlet>
-        <servlet-name>AccountServlet</servlet-name>
-        <servlet-class>Controller.AccountServlet</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>HomeServlet</servlet-name>
         <servlet-class>Controller.HomeServlet</servlet-class>
     </servlet>
@@ -40,10 +36,18 @@
         <servlet-name>LoadCartServlet</servlet-name>
         <servlet-class>Controller.LoadCartServlet</servlet-class>
     </servlet>
-    <servlet-mapping>
-        <servlet-name>AccountServlet</servlet-name>
-        <url-pattern>/AccountServlet</url-pattern>
-    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddElectronic</servlet-name>
+        <servlet-class>Admin.Controller.AddElectronic</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminHomeServlet</servlet-name>
+        <servlet-class>Admin.Controller.AdminHomeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteToCartServlet</servlet-name>
+        <servlet-class>Controller.DeleteToCartServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/HomeServlet</url-pattern>
@@ -76,9 +80,21 @@
         <servlet-name>LoadCartServlet</servlet-name>
         <url-pattern>/LoadCartServlet</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddElectronic</servlet-name>
+        <url-pattern>/AddElectronic</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminHomeServlet</servlet-name>
+        <url-pattern>/AdminHomeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteToCartServlet</servlet-name>
+        <url-pattern>/DeleteToCartServlet</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
-            60
+            600
         </session-timeout>
     </session-config>
 </web-app>

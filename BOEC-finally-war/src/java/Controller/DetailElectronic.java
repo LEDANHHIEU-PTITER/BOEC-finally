@@ -35,7 +35,7 @@ public class DetailElectronic extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet DetailElectronic</title>");            
+            out.println("<title>Servlet DetailElectronic</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet DetailElectronic at " + request.getContextPath() + "</h1>");
@@ -44,15 +44,6 @@ public class DetailElectronic extends HttpServlet {
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

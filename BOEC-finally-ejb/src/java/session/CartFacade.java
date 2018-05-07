@@ -9,8 +9,9 @@ import entities.Cart;
 import entities.Item;
 import entities.Itemdetail;
 import java.util.ArrayList;
+import java.util.List;
 import javax.annotation.PostConstruct;
-import javax.ejb.Stateless;
+import javax.ejb.Stateful;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -18,10 +19,18 @@ import javax.persistence.PersistenceContext;
  *
  * @author HieuLe
  */
-@Stateless
+@Stateful
 public class CartFacade extends AbstractFacade<Cart> implements CartFacadeLocal {
 
-    private ArrayList<Itemdetail> listItems;
+    private List<Itemdetail> listItems;
+//    private static CartFacade cartFacade;
+//
+//    public CartFacade getInstance() {
+//        if (cartFacade == null) {
+//            cartFacade = new CartFacade();
+//        }
+//        return cartFacade;
+//    }
 
     @PostConstruct
     void init() {
@@ -57,8 +66,13 @@ public class CartFacade extends AbstractFacade<Cart> implements CartFacadeLocal 
     }
 
     @Override
-    public ArrayList<Itemdetail> getCart() {
+    public List<Itemdetail> getCart() {
         return listItems;
+    }
+
+    @Override
+    public void setCart(List<Itemdetail> itemdetails) {
+        listItems = itemdetails;
     }
 
     @Override

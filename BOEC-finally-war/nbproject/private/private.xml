@@ -2,21 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/D:/Hoc%20Tap/Nam%204/Kien%20Truc%20Va%20Thiet%20Ke%20Phan%20Mem/Project%20Netbean/BOEC-finally/BOEC-finally-war/web/scripts/login.js</file>
-            <file>file:/D:/Hoc%20Tap/Nam%204/Kien%20Truc%20Va%20Thiet%20Ke%20Phan%20Mem/Project%20Netbean/BOEC-finally/BOEC-finally-war/web/Login.jsp</file>
-            <file>file:/D:/Hoc%20Tap/Nam%204/Kien%20Truc%20Va%20Thiet%20Ke%20Phan%20Mem/Project%20Netbean/BOEC-finally/BOEC-finally-war/web/Footer.jsp</file>
-            <file>file:/D:/Hoc%20Tap/Nam%204/Kien%20Truc%20Va%20Thiet%20Ke%20Phan%20Mem/Project%20Netbean/BOEC-finally/BOEC-finally-war/web/Header.jsp</file>
-            <file>file:/D:/Hoc%20Tap/Nam%204/Kien%20Truc%20Va%20Thiet%20Ke%20Phan%20Mem/Project%20Netbean/BOEC-finally/BOEC-finally-war/web/scripts/register.js</file>
-            <file>file:/D:/Hoc%20Tap/Nam%204/Kien%20Truc%20Va%20Thiet%20Ke%20Phan%20Mem/Project%20Netbean/BOEC-finally/BOEC-finally-war/src/java/Controller/ItemDetailServlet.java</file>
-            <file>file:/D:/Hoc%20Tap/Nam%204/Kien%20Truc%20Va%20Thiet%20Ke%20Phan%20Mem/Project%20Netbean/BOEC-finally/BOEC-finally-war/web/scripts/cart.js</file>
-            <file>file:/D:/Hoc%20Tap/Nam%204/Kien%20Truc%20Va%20Thiet%20Ke%20Phan%20Mem/Project%20Netbean/BOEC-finally/BOEC-finally-war/src/java/Controller/DetailElectronic.java</file>
-            <file>file:/D:/Hoc%20Tap/Nam%204/Kien%20Truc%20Va%20Thiet%20Ke%20Phan%20Mem/Project%20Netbean/BOEC-finally/BOEC-finally-war/src/java/Controller/LoginServlet.java</file>
-            <file>file:/D:/Hoc%20Tap/Nam%204/Kien%20Truc%20Va%20Thiet%20Ke%20Phan%20Mem/Project%20Netbean/BOEC-finally/BOEC-finally-war/src/java/Controller/AddToCartServlet.java</file>
-            <file>file:/D:/Hoc%20Tap/Nam%204/Kien%20Truc%20Va%20Thiet%20Ke%20Phan%20Mem/Project%20Netbean/BOEC-finally/BOEC-finally-war/web/Cart.jsp</file>
-            <file>file:/D:/Hoc%20Tap/Nam%204/Kien%20Truc%20Va%20Thiet%20Ke%20Phan%20Mem/Project%20Netbean/BOEC-finally/BOEC-finally-war/web/Home.jsp</file>
-            <file>file:/D:/Hoc%20Tap/Nam%204/Kien%20Truc%20Va%20Thiet%20Ke%20Phan%20Mem/Project%20Netbean/BOEC-finally/BOEC-finally-war/src/java/Controller/LoadCartServlet.java</file>
-            <file>file:/D:/Hoc%20Tap/Nam%204/Kien%20Truc%20Va%20Thiet%20Ke%20Phan%20Mem/Project%20Netbean/BOEC-finally/BOEC-finally-war/src/java/Controller/HomeServlet.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
