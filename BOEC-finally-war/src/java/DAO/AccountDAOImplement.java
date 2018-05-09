@@ -14,7 +14,7 @@ import Model.Account;
  */
 public class AccountDAOImplement extends ConnectDB implements AccountDAO {
 
-    public static AccountDAOImplement instance;
+    private static AccountDAOImplement instance;
 
     public AccountDAOImplement() {
         ConnectDB intance = ConnectDB.getIntance();
