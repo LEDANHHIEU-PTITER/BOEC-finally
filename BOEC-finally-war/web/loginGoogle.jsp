@@ -12,39 +12,51 @@
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <title>Insert title here</title>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <meta name="google-signin-client_id" content="688397542022-konnbsjrq9qpcb9ak5j4j59s1ovb4g64.apps.googleusercontent.com">
+        <meta name="google-signin-client_id" content="122618528086-6cnusvs5f24bnvo2r217jlamesj6sfkc.apps.googleusercontent.com">
+        <!--        <meta name="google-signin-client_id" content="688397542022-konnbsjrq9qpcb9ak5j4j59s1ovb4g64.apps.googleusercontent.com">-->
     </head>
     <body>
-        <jsp:include page="Header.jsp"></jsp:include>
-        <div class="g-signin2" data-onsuccess="onSignIn" id="myP"></div>
+        <div class="g-signin2" data-onsuccess="onSignIn" id="myP" ></div>
         <img id="myImg"><br>
         <p id="name"></p>
         <div id="status">
-        </div>
-        <form action="LoginServlet" method="post">
-            <script type="text/javascript">
-                function onSignIn(googleUser) {
-                    
-                    var profile = googleUser.getBasicProfile();
-                    var imagurl = profile.getImageUrl();
-                    var name = profile.getName();
-                    var email = profile.getEmail();
-                    document.getElementById("myImg").src = imagurl;
-                    document.getElementById("name").innerHTML = name;
-                    document.getElementById("myP").style.visibility = "hidden";
-                }
-                ;
-            </script>
-            <button onclick="myFunction()">Sign Out</button>
-        </form>
-
-        
+        </div><a href="#" onclick="signOut();">Sign out</a>
         <script>
-            function myFunction() {
-                gapi.auth2.getAuthInstance().disconnect();
-                location.reload();
+            function signOut() {
+                var auth2 = gapi.auth2.getAuthInstance();
+                auth2.signOut().then(function () {
+                    console.log('User signed out.');
+                });
             }
         </script>
-        <jsp:include page="Footer.jsp"></jsp:include>
+        <script type="text/javascript">
+            function onSignIn(googleUser) {
+                var profile = googleUser.getBasicProfile();
+                console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+                console.log('Name: ' + profile.getName());
+                console.log('Image URL: ' + profile.getImageUrl());
+                console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+                window.location.href = "abc.jsp";
+//                        var profile = googleUser.getBasicProfile();
+//                var imagurl = profile.getImageUrl();
+//                var name = profile.getName();
+//                var email = profile.getEmail();
+//                document.getElementById("myImg").src = imagurl;
+//                document.getElementById("name").innerHTML = name;
+//                document.getElementById("myP").style.visibility = "hidden";
+            }
+        </script>
+        <!--        <form action="LoginServlet" method="post">
+        
+                    <button onclick="myFunction()">Sign Out</button>
+                </form>-->
+
+
+        <!--        <script>
+                    function myFunction() {
+                        gapi.auth2.getAuthInstance().disconnect();
+                        location.reload();
+                    }
+                </script>-->
     </body>
 </html>

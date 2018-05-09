@@ -50,7 +50,6 @@
                         <%for (int i = 0; i < listItemDetails.size(); i++) {%>
                         <tr>
                             <td> <%=listItemDetails.get(i).getItemID().getId()%></td>
-                            <td> <%=i%></td>
                             <td> <%=listItemDetails.get(i).getItemID().getName()%></td>
                             <td> <%=listItemDetails.get(i).getItemID().getPrice()%></td>
                             <td> <%=listItemDetails.get(i).getQuantity()%></td>
