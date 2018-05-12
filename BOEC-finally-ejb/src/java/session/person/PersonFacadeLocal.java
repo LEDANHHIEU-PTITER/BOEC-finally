@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package session;
+package session.person;
 
-import entities.Account;
-import entities.Person;
+import entities.person.Account;
+import entities.person.Person;
 import java.util.List;
 import javax.ejb.Local;
 

@@ -5,6 +5,8 @@
  */
 package entities;
 
+import entities.cart.Company;
+import entities.cart.Item;
 import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;

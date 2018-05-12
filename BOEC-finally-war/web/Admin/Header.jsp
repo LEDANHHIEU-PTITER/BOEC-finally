@@ -3,8 +3,8 @@
     Created on : May 5, 2018, 4:14:41 PM
     Author     : HieuLe
 --%>
+<%@page import="entities.person.Account"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="entities.Account"%>
 <!-- Kiểm tra Session Login Admin Or Employee-->
 <% Account account = (Account) session.getAttribute("currentAccEmployee");
     if (account == null || account.getRoleId().getName().equalsIgnoreCase("User")) {%>

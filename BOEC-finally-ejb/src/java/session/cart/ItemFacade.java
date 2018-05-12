@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package session;
+package session.cart;
 
-import entities.Category;
-import entities.Item;
+import entities.cart.Category;
+import entities.cart.Item;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import session.AbstractFacade;
 
 /**
  *

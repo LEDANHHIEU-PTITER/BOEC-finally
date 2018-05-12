@@ -3,8 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entities;
+package entities.person;
 
+import entities.customer.Author;
+import entities.customer.Customer;
+import entities.customer.Customervip;
+import entities.employee.Countingemloyee;
+import entities.employee.Employee;
+import entities.employee.Maketingemployee;
+import entities.employee.Managingemployee;
+import entities.employee.Selleremployee;
+import entities.employee.Warehouseemployee;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;

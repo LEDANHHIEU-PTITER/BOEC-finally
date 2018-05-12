@@ -13,7 +13,6 @@
         <title>Insert title here</title>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <meta name="google-signin-client_id" content="122618528086-6cnusvs5f24bnvo2r217jlamesj6sfkc.apps.googleusercontent.com">
-        <!--        <meta name="google-signin-client_id" content="688397542022-konnbsjrq9qpcb9ak5j4j59s1ovb4g64.apps.googleusercontent.com">-->
     </head>
     <body>
         <div class="g-signin2" data-onsuccess="onSignIn" id="myP" ></div>
@@ -36,7 +35,7 @@
                 console.log('Name: ' + profile.getName());
                 console.log('Image URL: ' + profile.getImageUrl());
                 console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-                window.location.href = "abc.jsp";
+//                window.location.href = "abc.jsp";
 //                        var profile = googleUser.getBasicProfile();
 //                var imagurl = profile.getImageUrl();
 //                var name = profile.getName();

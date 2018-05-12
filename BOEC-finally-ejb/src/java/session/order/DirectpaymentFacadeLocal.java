@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package session;
+package session.order;
 
-import entities.Directpayment;
+import entities.order.Directpayment;
 import java.util.List;
 import javax.ejb.Local;
 

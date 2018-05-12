@@ -5,12 +5,12 @@
  */
 package Controller;
 
-import entities.Cart;
-import entities.Item;
-import entities.Itemdetail;
+
+import entities.cart.Cart;
+import entities.cart.Item;
+import entities.cart.Itemdetail;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import session.CartFacadeLocal;
+import session.cart.CartFacadeLocal;
 
 /**
  *

@@ -3,8 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entities;
+package entities.cart;
 
+import entities.Electronic;
+import entities.Laptop;
+
+import entities.employee.Warehouseemployee;
+import entities.item.book.Book;
+import entities.item.book.Literaturebook;
+import entities.item.book.Techbook;
+import entities.item.clothes.Clothes;
+import entities.item.clothes.Femaleclothes;
+import entities.item.clothes.Maleclothes;
+import entities.item.electronic.Smartphone;
+import entities.item.electronic.Tablet;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Basic;

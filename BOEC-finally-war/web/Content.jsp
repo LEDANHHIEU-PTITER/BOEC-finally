@@ -4,10 +4,10 @@
     Author     : HieuLe
 --%>
 
+<%@page import="entities.item.electronic.Smartphone"%>
 <%@page import="java.util.AbstractList"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="entities.Smartphone"%>
-<%@page import="entities.Account"%>
+
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div id="body">

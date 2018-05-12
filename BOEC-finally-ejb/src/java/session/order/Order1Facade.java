@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package session;
+package session.order;
 
-import entities.Order1;
+import entities.order.Order1;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import session.AbstractFacade;
 
 /**
  *

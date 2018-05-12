@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package session;
+package session.store;
 
-import entities.Caugiaystore;
+import entities.store.Caugiaystore;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import session.AbstractFacade;
 
 /**
  *

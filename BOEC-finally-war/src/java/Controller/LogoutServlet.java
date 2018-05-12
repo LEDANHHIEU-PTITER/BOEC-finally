@@ -5,8 +5,8 @@
  */
 package Controller;
 
-import entities.Account;
-import entities.Customer;
+
+import entities.customer.Customer;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;

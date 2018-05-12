@@ -48,7 +48,26 @@ function login() {
         dataType: 'html',
         success: function (result) {
             if (result == "ok") {
-//                $('#loginModal').modal('hide');
+                $(location).attr('href', 'http://localhost:8080/BOEC-finally-war/Home.jsp');
+                alert("Đăng nhập thành công");
+            } else {
+                alert("Tên hoặc mật khẩu không đúng");
+                $('#userName').focus();
+            }
+        },
+        error: function (result) {
+            alert("Không có dữ liệu trả về");
+        }
+    });
+}
+function loginWithGoogle(email, id, name) {
+    $.ajax({
+        type: 'POST',
+        url: 'LoginServlet',
+        data: {un: email, pw: id},
+        dataType: 'html',
+        success: function (result) {
+            if (result == "ok") {
                 $(location).attr('href', 'http://localhost:8080/BOEC-finally-war/Home.jsp');
                 alert("Đăng nhập thành công");
             } else {

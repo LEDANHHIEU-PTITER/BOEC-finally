@@ -5,12 +5,10 @@
  */
 package Controller;
 
-import com.google.gson.Gson;
-import entities.Cart;
-import entities.Itemdetail;
+import entities.cart.Cart;
+import entities.cart.Itemdetail;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -18,7 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import session.CartFacadeLocal;
+import session.cart.CartFacadeLocal;
 
 /**
  *
@@ -74,6 +72,8 @@ public class LoadCartServlet extends HttpServlet {
             List<Itemdetail> listCartItem = cartFacade.getCart();
             if (session.getAttribute("currentSessionCart") != null) {
                 Cart cartCurrent = (Cart) session.getAttribute("currentSessionCart");       // Lấy Session Cart hiện tại
+                cartCurrent.getItemdetailList();
+//                session.setAttribute("amount", );
 //                ArrayList<Itemdetail> listCartItem = cartFacade.getCart();
 //                Cart currentcart = (Cart) session.getAttribute("currentSessionCart");
 //                json = new Gson().toJson(cartCurrent);

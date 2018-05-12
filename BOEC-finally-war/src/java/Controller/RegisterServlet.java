@@ -5,29 +5,21 @@
  */
 package Controller;
 
-import DAO.AccountDAO;
-import GenerateID.GenerateSequenceID;
-import entities.Account;
-import entities.Author;
-import entities.Category;
-import entities.Customer;
-import entities.Item;
-import entities.Person;
+
+import entities.customer.Customer;
+import entities.person.Account;
+import entities.person.Person;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import session.AccountFacadeLocal;
-import session.AuthorFacadeLocal;
-import session.CustomerFacadeLocal;
-import session.ItemFacadeLocal;
-import session.PersonFacadeLocal;
+import session.customer.CustomerFacadeLocal;
+import session.person.AccountFacadeLocal;
+import session.person.PersonFacadeLocal;
 
 /**
  *

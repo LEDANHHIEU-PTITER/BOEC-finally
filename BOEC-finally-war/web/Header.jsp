@@ -3,8 +3,9 @@
     Created on : Oct 10, 2017, 9:38:52 AM
     Author     : HieuLe
 --%>
+<%@page import="entities.customer.Customer"%>
+<%@page import="entities.cart.Cart"%>
 <%@page import="GenerateID.GenerateSequenceID"%>
-<%@page import="entities.*"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%

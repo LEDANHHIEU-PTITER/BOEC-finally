@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entities;
+package entities.item.book;
 
+import entities.cart.Item;
+import entities.customer.Author;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;

@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entities;
+package entities.order;
 
+import entities.cart.Cart;
+import entities.employee.Countingemloyee;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;

@@ -5,12 +5,12 @@
  */
 package Admin.Controller;
 
-import entities.Category;
-import entities.Electronic;
-import entities.Item;
+
 import entities.Laptop;
-import entities.Smartphone;
-import entities.Tablet;
+import entities.cart.Category;
+import entities.cart.Item;
+import entities.item.electronic.Smartphone;
+import entities.item.electronic.Tablet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.ejb.EJB;
@@ -18,12 +18,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import session.CategoryFacadeLocal;
-import session.ElectronicFacadeLocal;
-import session.ItemFacadeLocal;
-import session.LaptopFacadeLocal;
-import session.SmartphoneFacadeLocal;
-import session.TabletFacadeLocal;
+import session.cart.CategoryFacadeLocal;
+import session.cart.ItemFacadeLocal;
+import session.item.electronic.ElectronicFacadeLocal;
+import session.item.electronic.LaptopFacadeLocal;
+import session.item.electronic.SmartphoneFacadeLocal;
+import session.item.electronic.TabletFacadeLocal;
+
 
 /**
  *

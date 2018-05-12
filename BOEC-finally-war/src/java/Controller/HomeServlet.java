@@ -5,13 +5,11 @@
  */
 package Controller;
 
-import Model.Account;
-import entities.Category;
 import entities.Electronic;
-import entities.Item;
-import entities.Smartphone;
+import entities.cart.Category;
+import entities.cart.Item;
+import entities.item.electronic.Smartphone;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.EJB;
@@ -20,10 +18,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import session.CategoryFacadeLocal;
-import session.ElectronicFacadeLocal;
-import session.ItemFacadeLocal;
-import session.SmartphoneFacadeLocal;
+import session.cart.CategoryFacadeLocal;
+import session.cart.ItemFacadeLocal;
+import session.item.electronic.ElectronicFacadeLocal;
+import session.item.electronic.SmartphoneFacadeLocal;
 //import session.AccountFacadeLocal;
 
 /**

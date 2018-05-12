@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package session;
+package session.employee;
 
-import entities.Maketingemployee;
+import entities.employee.Maketingemployee;
 import java.util.List;
 import javax.ejb.Local;
 

@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package session;
+package session.item.clothes;
 
-import entities.Femaleclothes;
+import entities.item.clothes.Femaleclothes;
 import java.util.List;
 import javax.ejb.Local;
 

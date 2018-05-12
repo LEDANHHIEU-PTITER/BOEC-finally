@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package session;
+package session.item.electronic;
 
 import entities.Electronic;
 import java.util.List;

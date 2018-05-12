@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package session;
+package session.cart;
 
-import entities.Category;
+import entities.cart.Category;
 import java.util.List;
 import javax.ejb.Local;
 

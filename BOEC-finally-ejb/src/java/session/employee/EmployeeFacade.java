@@ -5,10 +5,11 @@
  */
 package session;
 
-import entities.Employee;
+import entities.employee.Employee;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import session.employee.EmployeeFacadeLocal;
 
 /**
  *

@@ -6,12 +6,11 @@
 package Controller;
 
 
-import entities.Cart;
-import entities.Item;
-import entities.Itemdetail;
+import entities.cart.Cart;
+import entities.cart.Item;
+import entities.cart.Itemdetail;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -19,8 +18,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import session.CartFacadeLocal;
-import session.ItemFacadeLocal;
+import session.cart.CartFacadeLocal;
+import session.cart.ItemFacadeLocal;
+
 
 /**
  *
@@ -84,6 +84,11 @@ public class AddToCartServlet extends HttpServlet {
                 cartFacade.addItemToCart(item);
                 List<Itemdetail> listItemCart = cartFacade.getCart();
                 cartCurrent.setItemdetailList(listItemCart);
+                float amount = 0;
+                for (Itemdetail itemdetail : listItemCart) {
+                    amount += itemdetail.getPrice() * itemdetail.getQuantity();
+                }
+                cartCurrent.setAmount(amount);
                 session.setAttribute("currentSessionCart", cartCurrent);        // Set lại Cart cho Session
                 json = "{\"OK\" : 1}";
             } else {
